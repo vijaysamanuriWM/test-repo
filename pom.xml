@@ -1,0 +1,63 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.test</groupId>
+    <artifactId>testing</artifactId>
+    <version>1.4.2</version>
+    <packaging>pom</packaging>
+    <name>TEST</name>
+    <description>Java Experts</description>
+    <organization>
+        <name>TEST</name>
+        <url>http://www.test.com</url>
+    </organization>
+    <build>
+	   <plugins>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.8.1</version>
+</plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>2.2</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                                <phase>site</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>2.8.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                                <phase>site</phase>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-release-plugin</artifactId>
+                        <version>2.5.1</version>
+                                                <configuration>
+                                                        <tagNameFormat>v@{project.version}</tagNameFormat>
+                                                        <releaseVersion>${project.version}</releaseVersion>
+                                                        <updateVersionsToSnapshot>false</updateVersionsToSnapshot>
+                                                        <autoVersionSubmodules>true</autoVersionSubmodules>
+                                                        <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+                                                </configuration>
+                                        </plugin>
+                </plugins>
+                                              
+    </build>
+</project>
