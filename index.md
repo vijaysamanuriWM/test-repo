@@ -5,6 +5,8 @@ HyScale is an app deployment tool for deploying apps to Kubernetes quickly witho
 
 See documentation [here](https://hyscale.github.com).
 
+# Demo
+
 ## Installation
 
 Open your terminal and enter the following:
